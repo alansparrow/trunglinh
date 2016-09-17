@@ -14,4 +14,10 @@ public class GreetingController {
         return "greeting";
     }
 
+    @RequestMapping(value = "/")
+	public String home() {
+		System.out.println("HomeController: Passing through...");
+		return "redirect:/index.html";
+	}
+
 }
